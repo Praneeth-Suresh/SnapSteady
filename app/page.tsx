@@ -20,7 +20,7 @@ export default function TremorDiagnosticApp() {
             <Activity className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-lg font-semibold text-foreground">TremorCare</h1>
+            <h1 className="text-lg font-semibold text-foreground">SnapSteady</h1>
             <p className="text-xs text-muted-foreground">Your tremor management companion</p>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "TremorCare - Tremor Diagnostic App",
+  title: "SnapSteady - Tremor Diagnostic App",
   description: "AI-powered tremor tracking and management for patients with Essential Tremor and Parkinson's",
   generator: "v0.app",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "TremorCare",
+    title: "SnapSteady",
   },
 }
 
