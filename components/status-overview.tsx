@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, AlertCircle, AlertTriangle } from "lucide-react"
 
 export function StatusOverview() {
-  // Mock current status - in real app, this would come from latest AI analysis
+  // Fixed sample reading; the demo does not receive device data
   const currentSeverity = 2.1 // Scale 0-10
   const trend = "improving" // improving, stable, worsening
 
@@ -16,7 +16,7 @@ export function StatusOverview() {
         borderColor: "border-success",
         icon: CheckCircle2,
         status: "Good Control",
-        message: "Your tremors are well-managed today",
+        message: "Example of a low reading",
       }
     } else if (currentSeverity < 6) {
       return {
@@ -25,7 +25,7 @@ export function StatusOverview() {
         borderColor: "border-warning",
         icon: AlertTriangle,
         status: "Moderate Activity",
-        message: "Tremor levels are elevated, consider your triggers",
+        message: "Example of a midrange reading",
       }
     } else {
       return {
@@ -34,7 +34,7 @@ export function StatusOverview() {
         borderColor: "border-destructive",
         icon: AlertCircle,
         status: "High Activity",
-        message: "Significant tremor activity detected today",
+        message: "Example of a high reading",
       }
     }
   }
@@ -54,12 +54,12 @@ export function StatusOverview() {
             <p className="text-sm opacity-90 mb-3">{config.message}</p>
             <div className="flex items-center gap-4 text-sm">
               <div>
-                <span className="opacity-75">Current Severity: </span>
+                <span className="opacity-75">Sample severity: </span>
                 <span className="font-semibold">{currentSeverity.toFixed(1)}/10</span>
               </div>
               <div className="h-4 w-px bg-current opacity-30" />
               <div>
-                <span className="opacity-75">Trend: </span>
+                <span className="opacity-75">Sample trend: </span>
                 <span className="font-semibold capitalize">{trend}</span>
               </div>
             </div>
