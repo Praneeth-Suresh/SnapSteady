@@ -1,29 +1,25 @@
 # SnapSteady
 
-SnapSteady is a mobile-first tremor monitoring prototype for people who want to track tremor severity, see recent trends, and review risk-oriented insights in one place.
-
-The objective is to complement a self-stabilizing assistive device with a software interface that helps users understand severity patterns over time.
+SnapSteady is a mobile-first interface prototype for reviewing a tremor timeline. It explores how a dashboard might complement a self-stabilizing assistive device. The current app uses fixed fictional data: it does not connect to a device, analyze anyone’s readings, or run a diagnostic model.
 
 ## Product Flow
 
 ```mermaid
 flowchart LR
-    A[Assistive device readings] --> B[Tremor severity timeline]
+    A[Fixed sample data] --> B[Tremor severity timeline]
     B --> C[Status overview]
     B --> D[Day/week/month graph]
-    B --> E[Risk-oriented insight panel]
-    C --> F[Patient-facing dashboard]
+    B --> E[Example context cards]
+    C --> F[Prototype dashboard]
     D --> F
     E --> F
 ```
 
 ## Features
 
-- Mobile-first dashboard for tremor management.
-- Color-coded status system for severity at a glance.
-- Interactive day/week/month tremor charts.
-- Risk-assessment card that distinguishes likely tremor patterns.
-- Insight panel for possible lifestyle correlations such as caffeine, sleep, and stress.
+- Mobile-first sample dashboard with a color-coded status overview.
+- Interactive day, week, and month views over fictional readings.
+- Example context cards that illustrate how a future interface might organize observations.
 
 ## Tech Stack
 
@@ -36,10 +32,10 @@ flowchart LR
 
 ## Getting Started
 
-Install dependencies and start the development server:
+From the repository root, install the locked dependencies and start the development server:
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -51,6 +47,6 @@ http://localhost:3000
 
 ## Status and Safety Notes
 
-This is a prototype interface, not a medical device or clinical diagnostic system. Any future clinical version would need real sensor integration, labelled validation data, clinician review, privacy controls, and regulatory review before being used for medical decisions.
+The numbers and charts are placeholders, not health measurements or recommendations. This is not a medical device or clinical diagnostic system. Do not use it to make health decisions. Any future clinical version would need real sensor integration, labelled validation data, clinician review, privacy controls, and regulatory review before being used for medical decisions.
 
-Interested in this area? Email me at praneeth.suresh.s@gmail.com.
+Feedback on the interface is welcome in the repository’s [issue tracker](https://github.com/Praneeth-Suresh/SnapSteady/issues).

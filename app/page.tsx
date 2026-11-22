@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { TremorGraph } from "@/components/tremor-graph"
-import { RiskAssessment } from "@/components/risk-assessment"
 import { InsightsPanel } from "@/components/insights-panel"
 import { StatusOverview } from "@/components/status-overview"
 import { Activity, TrendingDown, TrendingUp } from "lucide-react"
@@ -21,12 +20,16 @@ export default function TremorDiagnosticApp() {
           </div>
           <div>
             <h1 className="text-lg font-semibold text-foreground">SnapSteady</h1>
-            <p className="text-xs text-muted-foreground">Your tremor management companion</p>
+            <p className="text-xs text-muted-foreground">Dashboard prototype · Sample data</p>
           </div>
         </div>
       </header>
 
       <main className="max-w-2xl mx-auto px-4 py-6 space-y-6">
+        <p className="rounded-lg border border-border bg-muted p-3 text-sm text-foreground">
+          Demo only. All readings are fictional. No sensors or diagnostic model are connected.
+        </p>
+
         {/* Status Overview - Color Coded */}
         <StatusOverview />
 
@@ -34,18 +37,14 @@ export default function TremorDiagnosticApp() {
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Tremor Severity Tracking</CardTitle>
-            <CardDescription>Monitor your tremor patterns over time</CardDescription>
+            <CardDescription>Explore fictional readings over time</CardDescription>
           </CardHeader>
           <CardContent>
             <TremorGraph timeRange={timeRange} onTimeRangeChange={setTimeRange} />
           </CardContent>
         </Card>
 
-        {/* Risk Assessment */}
-        <RiskAssessment />
-
-        {/* AI-Generated Insights */}
-        <InsightsPanel timeRange={timeRange} />
+        <InsightsPanel />
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 gap-4">
@@ -55,7 +54,7 @@ export default function TremorDiagnosticApp() {
                 <TrendingDown className="w-4 h-4" />
                 <span className="text-2xl font-bold">12%</span>
               </div>
-              <p className="text-sm text-muted-foreground">Improvement this week</p>
+              <p className="text-sm text-muted-foreground">Example change this week</p>
             </CardContent>
           </Card>
           <Card>
@@ -64,7 +63,7 @@ export default function TremorDiagnosticApp() {
                 <TrendingUp className="w-4 h-4" />
                 <span className="text-2xl font-bold">4.2</span>
               </div>
-              <p className="text-sm text-muted-foreground">Avg daily severity</p>
+              <p className="text-sm text-muted-foreground">Example daily average</p>
             </CardContent>
           </Card>
         </div>

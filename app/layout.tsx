@@ -7,8 +7,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "SnapSteady - Tremor Diagnostic App",
-  description: "AI-powered tremor tracking and management for patients with Essential Tremor and Parkinson's",
+  title: "SnapSteady | Dashboard prototype",
+  description: "A sample-data interface prototype for viewing tremor timelines",
   generator: "v0.app",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   themeColor: "#0891b2",
